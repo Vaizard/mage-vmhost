@@ -1,0 +1,25 @@
+---
+
+- name: Including distro-specific variables
+  include_vars: "vars_{{ ansible_distribution }}.yml"
+  
+- name: "Setting things up for {{ ansible_distribution }}"
+  include: "setup_{{ ansible_distribution }}.yml"
+  when: ansible_distribution in [ 'Ubuntu', 'Gentoo' ]
+
+- name: "Ensuring services are started and enabled"
+  action: service name={{ item }} state=started enabled=yes
+  with_items: "{{ mage_services }}"
+    
+- name: "Ensuring that the sshd service is started and enabled"
+  service:
+    name: "{{ svcname_openssh }}"
+    state: started
+    enabled: yes
+  when: svcenable_openssh == 'yes'
+
+- name: "Ensuring that the sshd service is disabled"
+  service:
+    name: "{{ svcname_openssh }}"
+    enabled: no
+  when: svcenable_openssh == 'no' 

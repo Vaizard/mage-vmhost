@@ -1,0 +1,17 @@
+---
+mage_packages:
+  # networking
+  - net-misc/openssh
+  - net-misc/bridge-utils
+  # common base
+  - app-emulation/docker
+  - app-emulation/libvirt
+  - app-emulation/lxd
+  - app-admin/ansible
+  # utils
+  - sys-apps/smartmontools
+  - sys-power/powertop
+  
+svcname_docker: docker
+svcname_lxd: lxd 
+svcname_openssh: sshd

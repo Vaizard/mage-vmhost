@@ -1,0 +1,18 @@
+
+galaxy_info:
+  author: Pavel Stratil
+  company: Vaizard Institute
+  license: MIT
+  min_ansible_version: 2.0
+  description: Complete virtualization stack and devops toolbox.
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+    - name: Gentoo
+      versions:
+        - all
+  categories:
+    - system
+  dependencies:
+    - { role: vaizard.mage-common }

@@ -1,0 +1,17 @@
+---
+mage_packages:
+  # networking
+  - ssh
+  - bridge-utils
+  # common base
+  - lxd
+  - libvirt-bin
+  - docker.io
+  - ansible
+  # utils
+  - powertop
+  - smartmontools
+  
+svcname_docker: docker
+svcname_lxd: lxd 
+svcname_openssh: ssh
