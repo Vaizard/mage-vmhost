@@ -13,18 +13,19 @@
 
 - name: Configuring ssh keepalive interval
   lineinfile: dest=/etc/ssh/ssh_config
-    args:
-      regexp: "^ServerAliveInterval "
-      line: "ServerAliveInterval 120"
-      create: yes
+  args:
+    regexp: '^(.*)ServerAliveInterval(.*)'
+    line: "    ServerAliveInterval 60"
+    create: yes
 
 - name: Configuring ssh keepalive count
   lineinfile: dest=/etc/ssh/ssh_config
-    args:
-      regexp: "^ServerAliveCountMax "
-      line: "ServerAliveCountMax 3"
-      create: yes
-     
+  args:
+    regexp: '^(.*)ServerAliveCountMax(.*)'
+    line: "    ServerAliveCountMax 3"
+    create: yes
+
+      
 - name: "Ensuring that the sshd service is started and enabled"
   service:
     name: "{{ svcname_openssh }}"
