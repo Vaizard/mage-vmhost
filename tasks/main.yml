@@ -10,7 +10,21 @@
 - name: "Ensuring services are started and enabled"
   action: service name={{ item }} state=started enabled=yes
   with_items: "{{ mage_services }}"
-    
+
+- name: Configuring ssh keepalive interval
+  lineinfile: dest=/etc/ssh/ssh_config
+    args:
+      regexp: "^ServerAliveInterval "
+      line: "ServerAliveInterval 120"
+      create: yes
+
+- name: Configuring ssh keepalive count
+  lineinfile: dest=/etc/ssh/ssh_config
+    args:
+      regexp: "^ServerAliveCountMax "
+      line: "ServerAliveCountMax 3"
+      create: yes
+     
 - name: "Ensuring that the sshd service is started and enabled"
   service:
     name: "{{ svcname_openssh }}"
