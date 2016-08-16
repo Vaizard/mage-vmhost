@@ -3,6 +3,7 @@ mage_packages:
   # networking
   - ssh
   - bridge-utils
+  - iptables-persistent
   # common base
   - lxd
   - libvirt-bin

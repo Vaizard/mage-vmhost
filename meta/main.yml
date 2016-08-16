@@ -15,4 +15,4 @@ galaxy_info:
   categories:
     - system
   dependencies:
-    - { role: vaizard.mage-common }
+    - { role: mage.mage-common }
