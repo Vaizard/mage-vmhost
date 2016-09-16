@@ -13,6 +13,3 @@ mage_packages:
   - sys-apps/smartmontools
   - sys-power/powertop
   
-svcname_docker: docker
-svcname_lxd: lxd 
-svcname_openssh: sshd
