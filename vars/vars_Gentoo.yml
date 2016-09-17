@@ -3,6 +3,7 @@ mage_packages:
   # networking
   - net-misc/openssh
   - net-misc/bridge-utils
+  - net-misc/whois
   - net-firewall/iptables
   # common base
   - app-emulation/docker

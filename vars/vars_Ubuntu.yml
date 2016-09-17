@@ -4,6 +4,7 @@ mage_packages:
   - ssh
   - bridge-utils
   - iptables-persistent
+  - whois
   # common base
   - lxd
   - libvirt-bin
