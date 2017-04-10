@@ -5,12 +5,14 @@ mage_packages:
   - bridge-utils
   - iptables-persistent
   - whois
+  - curlftpfs
   # common base
   - lxd
   - libvirt-bin
   - docker.io
-  - ansible
+  #- ansible    # disabled temporarily only for kai production system, do NOT merge up
   # utils
   - powertop
   - smartmontools
+
   
