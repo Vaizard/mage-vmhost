@@ -10,7 +10,7 @@ mage_packages:
   - lxd
   - libvirt-bin
   - docker.io
-  #- ansible    # disabled temporarily only for kai production system, do NOT merge up
+  - ansible
   # utils
   - powertop
   - smartmontools
