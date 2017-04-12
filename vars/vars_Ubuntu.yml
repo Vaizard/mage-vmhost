@@ -11,6 +11,7 @@ mage_packages:
   - libvirt-bin
   - docker.io
   - ansible
+  - haveged
   # utils
   - powertop
   - smartmontools
