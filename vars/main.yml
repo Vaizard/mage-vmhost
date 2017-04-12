@@ -2,3 +2,4 @@
 mage_services:
   - "lxd" 
   - "docker"
+  - "haveged"
