@@ -11,6 +11,7 @@ mage_packages:
   - app-emulation/libvirt
   - app-emulation/lxd
   - app-admin/ansible
+  - sys-apps/haveged
   # utils
   - sys-apps/smartmontools
   - sys-power/powertop
