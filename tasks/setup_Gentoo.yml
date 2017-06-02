@@ -8,3 +8,4 @@
     newuse: yes
   with_items:
     - "{{ mage_packages }}"
+  tags: [ 'install' ]
