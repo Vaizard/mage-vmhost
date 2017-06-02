@@ -5,7 +5,6 @@ mage_packages:
   - bridge-utils
   - iptables-persistent
   - whois
-  - curlftpfs
   # common base
   - lxd
   - libvirt-bin

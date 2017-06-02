@@ -5,7 +5,6 @@ mage_packages:
   - net-misc/bridge-utils
   - net-misc/whois
   - net-firewall/iptables
-  - net-fs/curlftpfs
   # common base
   - app-emulation/docker
   - app-emulation/libvirt
