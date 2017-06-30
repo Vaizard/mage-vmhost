@@ -17,4 +17,4 @@ galaxy_info:
 
 dependencies:
   - { role: mage-common }
-  - { role: mage.openssh }
+  - { role: mage-openssh }
