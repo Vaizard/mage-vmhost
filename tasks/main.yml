@@ -11,3 +11,11 @@
   action: service name={{ item }} state=started enabled=yes
   with_items: "{{ mage_services }}"
 
+- name: "Ensuring /etc/sysctl.d/99-containers.conf is set"
+  template: 
+    src: containers.j2
+    dest: /etc/sysctl.d/99-containers.conf
+    mode: 0644
+
+- name: sysctl
+  shell: "sysctl -p"
