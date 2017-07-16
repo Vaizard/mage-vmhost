@@ -1,0 +1,6 @@
+check process lxd matching "/usr/bin/lxd"
+   start program = "/bin/systemctl start lxd"
+   stop program  = "/bin/systemctl stop lxd"
+   if cpu usage > 9% for 2 cycles then alert
+   if cpu usage > 12% for 5 cycles then restart
+   if 5 restarts within 20 cycles then timeout
